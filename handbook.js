@@ -32,3 +32,20 @@ console.log('colorName1', colorName1);
 var notSure = 4;
 notSure = "string";
 console.log("notSure", notSure);
+// void
+function warnUser() {
+    console.log('no return');
+}
+warnUser();
+// never never 타입은 절대 발생할 수 없는 타입을 나타냅니다
+function error(message) {
+    throw new Error(message);
+}
+function fail() {
+    return error("fail");
+}
+// create({prop: 0});
+// type assertions
+var someValue = "string type";
+var strLength = someValue.length;
+console.log("strLength", strLength);
