@@ -45,7 +45,23 @@ function fail() {
     return error("fail");
 }
 // create({prop: 0});
-// type assertions
+// type assertions - jsx와 사용할 가능성이 높으므로 as 를 사용하자
+// 타입 단언은 다른 언어의 타입 변환(형 변환)과 유사하지만, 다른 특별한 검사를 하거나 데이터를 재구성하지는 않습니다. 이는 런타임에 영향을 미치지 않으며, 온전히 컴파일러만 이를 사용합니다. 타입 스크립트는 개발자가 필요한 어떤 특정 검사를 수행했다고 인지합니다.
 var someValue = "string type";
 var strLength = someValue.length;
 console.log("strLength", strLength);
+// optional
+function optional(a, b) {
+    console.log(a, b);
+}
+optional(1);
+// generic
+function identyfy(arg) {
+    return arg;
+}
+identyfy("3");
+function identyfy2(arg) {
+    console.log('arg.length', arg.length);
+    return arg;
+}
+identyfy2([1, 2]);

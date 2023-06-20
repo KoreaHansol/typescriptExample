@@ -61,3 +61,24 @@ declare function create(o: object | null): void; // declare 선언후 컴파일�
 let someValue: any = "string type";
 let strLength: number = (someValue as string).length;
 console.log("strLength", strLength)
+
+
+// optional
+function optional(a: number, b?: number) {
+  console.log(a, b)
+}
+optional(1)
+
+// generic
+function identyfy<T>(arg: T): T {
+  return arg;
+}
+
+identyfy("3");
+
+function identyfy2<T>(arg: T[]): T[] {
+  console.log('arg.length', arg.length);
+  return arg;
+}
+
+identyfy2([1,2])
